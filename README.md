@@ -11,7 +11,8 @@
 ---
 
 ## 界面概览
-![image](https://github.com/114514qweserdewsw3245/Python-Package-Installer-for-Windows/blob/main/agent/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE_19-8-2026_161824_127.0.0.1.jpeg)
+![image](https://github.com/114514qweserdewsw3245/Python-Package-Installer-for-Windows/blob/main/agent/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE_19-8-2026_161956_127.0.0.1.jpeg)
+
 ![image](https://github.com/114514qweserdewsw3245/Python-Package-Installer-for-Windows/blob/main/agent/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE_19-8-2026_163520_127.0.0.1.jpeg)
 
 ## 功能
