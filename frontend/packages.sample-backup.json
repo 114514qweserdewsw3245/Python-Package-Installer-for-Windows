@@ -1,0 +1,7 @@
+{
+  "数据科学": [["numpy", "数值计算基础库"], ["pandas", "数据分析"], ["scipy", "科学计算"], ["matplotlib", "绘图"], ["jupyterlab", "Notebook 开发环境"]],
+  "机器学习": [["scikit-learn", "经典机器学习"], ["xgboost", "梯度提升树"], ["lightgbm", "高性能梯度提升"], ["optuna", "超参数优化"]],
+  "深度学习": [["torch", "PyTorch，体积较大"], ["tensorflow", "TensorFlow，体积较大"], ["transformers", "Hugging Face 大模型"], ["accelerate", "分布式训练"]],
+  "Web 开发": [["fastapi", "现代异步 API"], ["flask", "轻量 Web 框架"], ["django", "全功能 Web 框架"], ["uvicorn", "ASGI 服务器"]],
+  "实用工具": [["rich", "终端美化"], ["requests", "HTTP 请求"], ["pydantic", "数据验证"], ["python-dotenv", "环境变量"]]
+}

@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Python-Package-Installer-for-Windows V0.7.5</title>
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/grid.css">
+  <link rel="stylesheet" href="css/install-progress.css">
+  <link rel="stylesheet" href="css/import-export.css">
+  <link rel="stylesheet" href="css/presets-mirrors.css">
+</head>
+<body>
+<main class="wrap">
+  <header>
+    <div><h1 id="title"></h1><p id="subtitle"></p></div>
+    <div class="actions"><button id="refreshBtn" class="btn" title="Refresh">↻</button><button id="langBtn" class="btn"></button><button id="themeBtn" class="btn" title="Toggle theme">🌓</button></div>
+  </header>
+  <section class="notice"><strong id="windowsOnly"></strong><span id="intro"></span></section>
+  <section class="box">
+    <div class="section-title"><h2 id="envTitle"></h2><span id="connection" class="badge"></span></div>
+    <div id="envContent" class="metrics"></div><div id="solutions" class="solutions"></div>
+  </section>
+  <section class="box" id="catalogPage">
+    <div class="section-title packages-head"><h2 id="packagesTitle"></h2><span id="catalogSummary" class="badge"></span><input id="search" type="search"></div>
+    <div class="content"><aside id="categories"></aside><div id="packageList"></div><aside class="cart">
+      <h3 id="cartTitle"></h3><div id="cartList"></div>
+      <input id="customRequirement"><button id="addCustom" class="btn primary"></button>
+      <div class="file-actions">
+        <input id="requirementsFile" type="file" accept=".txt,text/plain" hidden>
+        <input id="configFile" type="file" accept=".json,application/json" hidden>
+        <button id="importRequirements" class="btn"></button><button id="exportRequirements" class="btn"></button>
+        <button id="importConfig" class="btn"></button><button id="exportConfig" class="btn"></button>
+      </div>
+      <p id="importResult" class="import-result" aria-live="polite"></p>
+      <div class="install-settings"><h3 id="settingsTitle"></h3>
+        <label><input type="radio" name="environmentMode" value="new_venv" checked><span id="newVenvLabel"></span></label>
+        <label><input type="radio" name="environmentMode" value="current_python"><span id="currentPythonLabel"></span></label>
+        <label><input type="radio" name="environmentMode" value="existing_venv"><span id="existingVenvLabel"></span></label>
+        <label class="workspace-label"><span id="workspaceLabel"></span><input id="workspace" maxlength="64" value="default"></label>
+        <label class="workspace-label"><span id="pythonCommandLabel"></span><select id="pythonCommand"><option value="python">python</option><option value="py">py</option><option value="python3">python3</option></select></label>
+        <label class="workspace-label"><span id="mirrorLabel"></span><select id="mirror"><option value="">Official PyPI</option><option value="https://pypi.tuna.tsinghua.edu.cn/simple">Tsinghua</option><option value="https://mirrors.aliyun.com/pypi/simple/">Aliyun</option><option value="https://pypi.mirrors.ustc.edu.cn/simple/">USTC</option><option value="https://mirrors.huaweicloud.com/repository/pypi/simple/">Huawei</option></select></label>
+      </div>
+      <section class="preset-panel"><div class="section-title"><h3 id="presetTitle"></h3></div><div id="presetList" class="preset-list"></div></section>
+      <section class="mirror-panel"><div class="section-title"><h3 id="mirrorSpeedTitle"></h3><button id="benchmarkMirrors" class="btn"></button></div><div id="mirrorResults" class="mirror-results" aria-live="polite"></div></section>
+      <button id="startInstall" class="btn primary"></button>
+    </aside></div>
+  </section>
+  <section class="box hidden" id="installPage">
+    <div class="section-title"><h2 id="installTitle"></h2><button class="btn" id="backBtn"></button></div>
+    <div id="taskSummary" class="task-summary"></div>
+    <div id="taskError" class="task-error"></div>
+    <div id="taskPackages" class="task-packages"></div>
+    <section class="live-log-panel">
+      <div class="section-title"><h3 id="liveLogTitle"></h3><span id="liveStatus" class="badge"></span></div>
+      <div id="liveLog" class="live-log" aria-live="polite"></div>
+    </section>
+  </section>
+  <p class="footer" id="phaseNote"></p>
+</main><div id="toast"></div>
+<script src="js/app.js"></script>
+</body></html>

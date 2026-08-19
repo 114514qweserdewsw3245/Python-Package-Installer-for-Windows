@@ -1,0 +1,17 @@
+/* Package cards are rendered directly into #packageList. */
+#packageList {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  min-width: 0;
+}
+
+#packageList > .package {
+  min-width: 0;
+}
+
+@media (max-width: 720px) {
+  #packageList {
+    grid-template-columns: 1fr;
+  }
+}

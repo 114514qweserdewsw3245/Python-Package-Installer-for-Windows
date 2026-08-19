@@ -1,0 +1,54 @@
+/* V0.7.3: readable, bounded live output for long-running pip tasks. */
+.live-log-panel {
+  margin-top: 12px;
+  border-top: 1px solid var(--border);
+  padding-top: 10px;
+}
+
+.live-log {
+  height: min(38vh, 360px);
+  overflow: auto;
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--code);
+  color: var(--code-text);
+  font: 12px/1.55 ui-monospace, SFMono-Regular, Consolas, monospace;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.log-line {
+  display: grid;
+  grid-template-columns: 76px minmax(0, 1fr);
+  gap: 8px;
+  padding: 1px 0;
+}
+
+.log-line time { color: #a1a1aa; }
+.log-line.success span { color: #86efac; }
+.log-line.error span { color: #fca5a5; }
+.log-line.warning span { color: #fcd34d; }
+
+.progress-track {
+  height: 8px;
+  overflow: hidden;
+  border-radius: 4px;
+  background: var(--soft);
+}
+
+.progress-track span {
+  display: block;
+  height: 100%;
+  background: var(--accent);
+  transition: width .2s ease;
+}
+
+.task-package.installing { border-color: var(--accent); }
+.task-package.success { border-left: 3px solid var(--ok); }
+.task-package.failed { border-left: 3px solid var(--danger); }
+
+@media (max-width: 620px) {
+  .live-log { height: 300px; }
+  .log-line { grid-template-columns: 1fr; gap: 0; }
+}
